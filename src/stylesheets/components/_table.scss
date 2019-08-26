@@ -1,0 +1,57 @@
+.table-container{
+    table{
+        overflow-x: scroll;
+        width: 100%;
+        border-spacing: 0;
+        thead{
+            background: $bluesky-color;
+        }
+        tbody{
+            // overflow-y: scroll;
+        }
+
+        tr{
+            th, td{
+                padding: 1em 6px;
+                border-spacing: 0;
+
+                margin: 0;
+
+            }
+
+            th{
+                background: $bluesky-color;
+            }
+            td{
+                
+            }
+            &:nth-child(even){
+                background: scale-color($bluesky-color, $lightness: 30%);
+            }
+            &:nth-child(odd){
+                background: $white-color;
+            }
+            svg{
+                font-size: 0.6em;
+                padding: 0.2em 10px;
+            }
+            svg.activo{
+                color: #54da3c;
+            }
+            svg.vencido{
+                color: orangered;
+            }
+            svg.proceso{
+                color: #3eaded;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .table-container{
+        table{
+            display: block;
+        }
+    }
+}

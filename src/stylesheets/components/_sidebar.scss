@@ -1,0 +1,55 @@
+$slidebar-color : #ececec;
+
+.sidebar{
+    background: $slidebar-color;
+    min-height:  90vh;
+    .sidebar-menu{
+        margin: 0;
+        padding: 0 0em;
+        li{
+            list-style: none;
+            // padding: 1em 0;     
+            &:hover{
+                // background: scale-color($slidebar-color, $lightness: -3%);
+            }
+            > a{
+                // font-weight: bold;
+            }
+            a{
+                padding: 1em 2em;
+                display: block; 
+                text-transform: uppercase;
+                cursor: pointer;  
+                text-decoration: none;
+                color: $gray-color;
+                &:hover{
+                    // background: red;
+                    background: $bluesky-color;
+
+                    svg{
+                        color: $red-color
+                    }
+                }
+            }
+            a.active{
+                color:$red-color;
+            }
+            
+            svg{
+                padding: 0 10px 0 0;
+                color: $gray-color;
+            }
+
+        }
+
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .sidebar{
+        min-height:  auto;
+        .sidebar-menu{
+
+        }
+    }
+}

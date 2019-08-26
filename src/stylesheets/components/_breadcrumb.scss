@@ -1,0 +1,22 @@
+ul.breadcrumb{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 1em 2em;
+   
+    li{
+        display: inline;
+        list-style: none;
+        padding-right: 5px;
+        color: white;
+        text-transform: uppercase;
+        &:before{
+            content: " > ";
+        }
+        &:nth-child(1)::before{
+            content: "";
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
